@@ -1,0 +1,40 @@
+page-home {
+
+    .geral {
+        background-image: url('./../assets/imgs/fundo.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 30%;
+    }
+
+    .cabecalho {
+        text-align: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .conteudo {
+        text-align: center;
+        height: 60%;
+        width: 100%;
+    }
+
+    .rodape {
+        text-align: center;
+        height: 25%;
+        width: 100%;
+    }
+
+    .botoes {
+        padding-top: 3px;
+        padding-bottom: 1px;
+        border-radius: 5px;
+        border: 1px solid #d6d9dc;
+        color: #535a60;
+        text-align: center;
+    }
+
+    .imagem-botao {
+       width: 50%;
+    }
+}

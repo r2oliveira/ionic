@@ -1,0 +1,66 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="geral" padding>
+    <!-- Imagem de cabeçalho -->
+    <div class="cabecalho">
+        <img src="assets/imgs/logo_agamenon_martins.png">
+      </div>
+  <!-- Botões da tela inicial -->
+  <div class="conteudo">
+    <ion-grid>  
+      <ion-row>
+        <ion-col col-6>
+          <div class="botoes" (click)="abrirCadastro()">
+            <img class="imagem-botao" src="assets/imgs/form_flat.png">
+            <br/>Cadastro
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="botoes" align="center" (click)="abrirQuemSomos()">
+            <img class="imagem-botao" src="assets/imgs/user_flat.png">
+            <br/>Quem Somos
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+              <br/><br/>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <div class="botoes" align="center" (click)="abrirSite()">
+            <img class="imagem-botao" src="assets/imgs/browser_flat.png">
+            <br/>Site
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="botoes" align="center" (click)="abrirWhatsapp()">
+            <img class="imagem-botao" src="assets/imgs/whatsapp_flat.png">
+            <br/>WhatsApp
+          </div>
+        </ion-col>
+      </ion-row>
+      
+
+    </ion-grid>
+  </div>
+
+  <!-- Links do rodapé -->
+  <div class="rodape">
+    <button color="light" ion-button block icon-start (click)="abrirSite()">
+      <ion-icon name="globe"></ion-icon> 
+      {{site}}
+    </button>
+    <button color="light" ion-button block icon-start (click)="abrirEmail()">
+      <ion-icon name="mail"></ion-icon> 
+      {{email}}
+    </button>
+    <button color="light" ion-button block icon-start (click)="fazerLigacao()">
+      <ion-icon name="call"></ion-icon> 
+      {{celular}}
+    </button>
+  </div>
+</ion-content>

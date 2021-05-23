@@ -1,0 +1,22 @@
+NODE JS
+https://nodejs.org/dist/latest-v8.x/node-v8.15.1-x64.msi
+
+IONIC 3
+npm install -g ionic@3.9.2
+
+CALLNUMBER
+
+ionic cordova plugin add call-number
+npm install @ionic-native/call-number
+
+
+EMAIL COMPOSER
+
+ionic cordova plugin add cordova-plugin-email-composer
+npm install @ionic-native/email-composer
+
+
+
+ionic cordova build android
+
+

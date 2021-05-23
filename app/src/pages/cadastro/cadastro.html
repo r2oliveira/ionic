@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label color="danger" floating>Nome</ion-label>
+      <ion-input type="text" maxLength="60" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="danger" floating>Telefone</ion-label>
+      <ion-input type="tel" maxLength="50" value="" [(ngModel)]="telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="danger" floating>WhatsApp</ion-label>
+      <ion-input type="tel" maxLength="50" value="" [(ngModel)]="whatsapp"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="danger" floating>E-mail</ion-label>
+      <ion-input type="email" maxLength="60" value="" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <br/><br/>
+    <ion-item>
+      <button color="danger" full ion-button round text-wrap>
+        Selecione nos ítens abaixo a <br>Informação Jurídica Desejada
+      </button>
+    </ion-item>
+
+    <div style="margin: auto;">
+      <ion-item *ngFor="let servicoJuridico of listaServicosJuridicos">
+        <ion-label text-wrap>{{servicoJuridico.titulo}}</ion-label>
+        <ion-checkbox color="danger" (ionChange)="marcaServicoJuridico(servicoJuridico.id)"></ion-checkbox>
+      </ion-item>
+    </div>
+    <br/>
+    <ion-item>
+      <ion-label color="dark" text-wrap>Permite que lhe faremos retorno após seu cadastro?</ion-label>
+      <ion-select color="danger" [(ngModel)]="permiteContato" interface="popover">
+        <ion-option color="danger" value="1">Sim</ion-option>
+        <ion-option color="danger" value="0">Não</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+    <ion-item>
+      <button color="danger" ion-button block large icon-end (click)="cliqueBotaoEnviar()">
+        Enviar
+        <ion-icon name='send'></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
